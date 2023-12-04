@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal */
+.modal {
+  width: 500px;
+  height: 300px;
+  gap: 0.4rem;
+  padding: 25px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal inputs */
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+}
+
+.checkbox {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
+
+input[name="isRead"] {
+  margin-left: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Buttons */
+button {
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: 600;
+}
+
+input[type="submit"] {
+  padding: 15px;
+  margin: auto;
+}
+
+#add-btn {
+  margin: 15px auto;
+}
+
+#close-btn {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/* Books */
+.books-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  min-height: 700px;
+}
+
+.book {
+  margin: 15px 30px;
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.book-info-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+.removeBtn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: lightslategray;
+  color: white;
+}
+
+.not-read {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #661414;
+}
+
+.read {
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: darkgreen;
+}

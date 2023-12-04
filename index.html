@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Library App</h1>
+        </header>
+        <div class="modal hidden">
+            <div class="modal-title">
+                <h2>Enter book details</h2>
+                <button id="close-btn">X</button>
+            </div>
+            <div class="inputs">
+                <form id="book-form" action="">
+                    <input class="book-fields" type="text" name='author' placeholder="Enter author">
+                    <input class="book-fields" type="text" name='title' placeholder="Enter title">
+                    <input class="book-fields" type="text" name='pages' placeholder="Enter pages" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" min="0">
+                    <div class="checkbox">
+                        Read <input class="book-fields" type="checkbox" name='isRead'>
+                    </div>
+                    <input type="submit" value="Add Book">
+                </form>
+            </div>
+        </div>
+        <div class="overlay hidden"></div>
+        <button id="add-btn" class="btn">Add Book</button>
+        <div class="books-container"></div>
+    </main>
+</body>
+</html>
