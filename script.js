@@ -90,6 +90,7 @@ function showLibrary() {
 
         const toggleReadButton = document.createElement('button');
         toggleReadButton.textContent = book.isRead ? 'Read' : 'Not read';
+        toggleReadButton.classList.add('toggleButton');
         toggleReadButton.classList.add(book.isRead ? 'read' : 'not-read');
         toggleReadButton.addEventListener('click', () => toggleReadStatus(index));
 

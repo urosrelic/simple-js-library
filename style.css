@@ -31,11 +31,9 @@ main {
 /* Modal */
 .modal {
   width: 500px;
-  height: 300px;
   gap: 0.4rem;
   padding: 25px;
   background-color: white;
-  border: 2px solid black;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -45,6 +43,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .modal-title {
@@ -60,7 +59,7 @@ main {
 
 /* Modal inputs */
 
-.inputs {
+#book-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,6 +69,7 @@ main {
 input[type="text"] {
   width: 100%;
   padding: 15px;
+  margin: 10px 0 10px 0;
 }
 
 .checkbox {
@@ -81,31 +81,62 @@ input[type="text"] {
 }
 
 input[name="isRead"] {
+  margin-top: 3px;
   margin-left: 30px;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 /* Buttons */
-button {
-  padding: 15px;
-  cursor: pointer;
-  border: 1px solid black;
-  font-weight: 600;
-}
-
 input[type="submit"] {
   padding: 15px;
   margin: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.2s;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(80, 165, 80);
 }
 
 #add-btn {
   margin: 15px auto;
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-size: 24px;
+  background-color: lightgray;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: white;
 }
 
 #close-btn {
   padding: 5px;
+  width: 30px;
   border-radius: 5px;
+  border: none;
+  transition: all 0.2s;
+  cursor: pointer;
+
+}
+
+#close-btn:hover {
+  background-color: #661414;
+  color: white;
 }
 
 /* Overlay */
@@ -136,11 +167,14 @@ input[type="submit"] {
   margin: 15px 30px;
   padding: 30px;
   width: 250px;
-  text-align: center;
   height: 300px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .book-info-container {
@@ -150,21 +184,47 @@ input[type="submit"] {
 }
 
 .removeBtn {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  height: 45px;
   background-color: lightslategray;
+  border: none;
+  cursor: pointer;
+
   color: white;
+  transition: all 0.2s;
+}
+
+.removeBtn:hover {
+  background-color: #661414;
+}
+
+.toggleButton {
+  height: 45px;
+  border: none;
+  cursor: pointer;
+  color: white;
+
 }
 
 .not-read {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: #661414;
+  background-color: rgb(216, 2, 84);
+  -webkit-transition: ease-out 0.6s;
+  -moz-transition: ease-out 0.6s;
+  transition: ease-out 0.6s;
+}
+
+.not-read:hover {
+  background-color: rgb(80, 165, 80);
+
 }
 
 .read {
   color: white;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: darkgreen;
+  background-color: rgb(80, 165, 80);
+  -webkit-transition: ease-out 0.6s;
+  -moz-transition: ease-out 0.6s;
+  transition: ease-out 0.6s;
+}
+
+.read:hover {
+  background-color: rgb(216, 2, 84);
 }
