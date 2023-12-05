@@ -35,6 +35,7 @@ form.addEventListener('submit', (e) => {
         const myBook = new Book(author.value, title.value, pages.value, isRead.checked);
         addBookToLibrary(myBook);
         showLibrary();
+        form.reset();
     } else {
         alert("Values must not be empty");
     }

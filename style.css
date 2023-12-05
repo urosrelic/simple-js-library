@@ -6,12 +6,18 @@
 
 body {
   min-height: 100vh;
+  background-color: lightgray;
+
 }
 
 header {
   padding: 20px;
+  height: 100px;
+  background-color: white; /* Gray background color */
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 main {
